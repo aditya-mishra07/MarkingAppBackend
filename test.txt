@@ -1,0 +1,106 @@
+{
+"first_name": "aditya",
+"last_name": "mishra",
+"email": "mishra.adi2005@gmail.com",
+"interested_category": "aiprojects",
+"verify_status": "False"
+}
+{
+"first_name": "adi",
+"last_name": "mishra",
+"email": "mishra.adi@gmail.com",
+"interested_category": "javaprojects",
+"verify_status": "False"
+}
+
+{
+"first_name": "avi",
+"last_name": "mishra",
+"email": "mishra.avi@gmail.com",
+"password": "avi123",
+"qualification": "MSC CompSci",
+"skills": "javaprojects",
+"verify_status": "False"
+}
+
+{
+"name": "javaprojects",
+"description": "javaprojects"
+}
+
+
+{
+"username": 1,
+"faculty_role" : 1,
+ "project": 1
+}
+
+
+{
+"username": 2,
+"moderator_role": 2,
+ "project": 3
+}
+{
+"student": "1",
+"project": "1",
+"project_submission_date": "07-05-2024",
+"project_target_completion_date": "",
+"project_submission_status": "MSC CompSci",
+"project_issue_date": "javaprojects",
+"list_of_academics": "False",
+"moderator": "False"
+
+}
+
+
+{
+"student": 3,
+"project": 3,
+ "project_submission_date":  "2024-03-01",
+"project_target_completion_date": "2024-03-05",
+"project_submission_status": "False",
+"list_of_academics": [5,6],
+"moderator": 2
+}
+
+{
+"student": 2,
+"project": 2,
+"project_target_completion_date": "2024-03-05",
+"project_submission_status": "False",
+"list_of_academics": [2,3],
+"moderator": 2
+}
+
+academics = models.ForeignKey(FacultyRoleAcademic, on_delete=models.CASCADE)
+project = models.ForeignKey(Project, on_delete=models.CASCADE)
+student = models.ForeignKey(Student, on_delete=models.CASCADE)
+mark = models.IntegerField(null=True,blank=True)
+verify_status=models.BooleanField(default=False)
+
+{
+"academics": 5,
+"project": 3,
+"student": 3,
+"mark": 90,
+"verify_status": false
+}
+
+
+{
+"academics": 6,
+"project": 3,
+"student": 3,
+"mark": 80,
+"verify_status": false
+}
+
+project = models.ForeignKey(Project, on_delete=models.CASCADE)
+student = models.ForeignKey(Student, on_delete=models.CASCADE)
+finalmark = models.DecimalField(max_digits=5,decimal_places=2,null=True,blank=True)
+
+{
+"project": 3,
+"student": 3
+}
